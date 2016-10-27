@@ -1,0 +1,18 @@
+/Databases
+/SitecorePlay.Web/SitecorePlay.Web/*
+!/SitecorePlay.Web/SitecorePlay.Web/Views/*
+!/SitecorePlay.Web/SitecorePlay.Web/Models/*
+!/SitecorePlay.Web/SitecorePlay.Web/layouts/*
+!/SitecorePlay.Web/SitecorePlay.Web/Controllers/*
+!/SitecorePlay.Web/SitecorePlay.Web/App_Start/*
+!/SitecorePlay.Web/SitecorePlay.Web/Global.asax
+/tmp
+
+*.csproj.user
+*.suo
+bin/
+obj/
+
+# NuGet packages folder
+src/packages
+!/SitecorePlay.Web/packages/repositories.config
