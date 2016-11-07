@@ -1,13 +1,22 @@
 /Databases
+
 /SitecorePlay.Web/SitecorePlay.Web/*
+!/SitecorePlay.Web/SitecorePlay.Web/App_Config
 !/SitecorePlay.Web/SitecorePlay.Web/Views
-!/SitecorePlay.Web/SitecorePlay.Web/Models
-!/SitecorePlay.Web/SitecorePlay.Web/layouts/*
-!/SitecorePlay.Web/SitecorePlay.Web/Scripts/*
-!/SitecorePlay.Web/SitecorePlay.Web/assets/*
+!/SitecorePlay.Web/SitecorePlay.Web/Model/
+!/SitecorePlay.Web/SitecorePlay.Web/layouts/
+!/SitecorePlay.Web/SitecorePlay.Web/Helpers/
+!/SitecorePlay.Web/SitecorePlay.Web/App_Start/
+!/SitecorePlay.Web/SitecorePlay.Web/Scripts/
+!/SitecorePlay.Web/SitecorePlay.Web/assets/
 !/SitecorePlay.Web/SitecorePlay.Web/Controllers
 !/SitecorePlay.Web/SitecorePlay.Web/App_Start
 !/SitecorePlay.Web/SitecorePlay.Web/Global.asax
+!/SitecorePlay.Web/SitecorePlay.Web/Global.asax.cs
+!/SitecorePlay.Web/SitecorePlay.Web/SitecorePlay.Web.csproj
+!/SitecorePlay.Web/SitecorePlay.Web/Web.config
+!/SitecorePlay.Web/SitecorePlay.Web/packages.config
+
 /tmp
 
 *.csproj.user
