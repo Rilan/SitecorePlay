@@ -111,7 +111,6 @@
     <Reference Include="Sitecore.Kernel, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Libraries\Sitecore.Kernel.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.Logging">
       <HintPath>..\Libraries\Sitecore.Logging.dll</HintPath>
