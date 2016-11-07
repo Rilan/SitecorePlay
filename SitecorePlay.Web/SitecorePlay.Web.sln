@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SitecorePlay.Web", "Sitecor
 EndProject
 Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "SitecorePlay.Master", "SitecorePlay.Master\SitecorePlay.Master.scproj", "{567BC558-4F01-493E-8336-F9061EEC6D24}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SitecorePlay.Model", "SitecorePlay.Model\SitecorePlay.Model.csproj", "{11D3799F-CDF6-43B0-8F6E-A5059DE65118}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{567BC558-4F01-493E-8336-F9061EEC6D24}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{567BC558-4F01-493E-8336-F9061EEC6D24}.Release|Any CPU.Build.0 = Release|Any CPU
 		{567BC558-4F01-493E-8336-F9061EEC6D24}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{11D3799F-CDF6-43B0-8F6E-A5059DE65118}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11D3799F-CDF6-43B0-8F6E-A5059DE65118}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11D3799F-CDF6-43B0-8F6E-A5059DE65118}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11D3799F-CDF6-43B0-8F6E-A5059DE65118}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,84 @@
+﻿@using Sitecore.Mvc
+@using SitecorePlay.Web.Controllers
+@{
+    Layout = null;
+}
+
+
+
+<script src="~/Scripts/jquery-3.1.1.js"></script>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<link href="~/assets/css/big-latter.css" rel="stylesheet" />
+
+@*<div>
+
+        @using (Html.BeginRouteForm(Sitecore.Mvc.Configuration.MvcSettings.SitecoreRouteName, FormMethod.Post))
+            {
+                 @Html.Sitecore().FormHandler("TwitterController", "SendTweet")
+                <input type="text" name="sendtweets" />
+                <input type="submit" value="Tweet" />
+
+            }
+
+    </div>*@
+@Html.Partial("SendTweet")
+
+<div class="container" id="tweet">
+    <div class="twitterfeed">
+        <div class="header">
+            <h2>Codehouse twitter feeds</h2>
+        </div>
+        <div class="twits scrollbar">
+            <ul>
+
+                @foreach (var item in (List<TweetSharp.TwitterStatus>)ViewData["tweets"])
+                {
+
+                    <li>
+                        <div class="avatar">
+                            <img class="profile" src="@item.Author.ProfileImageUrl" />
+                            <span class="mid-border"></span>
+                            <span class="arrow-box"></span>
+                            <span class="twitter-icon"><img src="~/Content/fonts/twitter_bird_logo.svg" /></span>
+                            <div class="twit-date">
+                                <span id="day">@item.CreatedDate.Day</span>
+                                <span id="month">@item.CreatedDate.Month</span>
+                                <span id="year">@item.CreatedDate.Year</span>
+                            </div>
+                        </div>
+                        <div class="message">
+                            <h3 id="screenname">@item.Author.ScreenName</h3>
+                            <p id="text">@Html.Raw(@item.TextAsHtml)</p>
+                            <div class="feed-image">
+                                @*<img src="https://dummyimage.com/600x400/c7c7c7/fff" />*@
+                            </div>
+                        </div>
+                    </li>
+
+
+                }
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+    $(function () {
+        setInterval(function () {
+            $.get("/a/Twitter/TwitterFeed");
+
+
+
+        },
+    60000);
+    });
+
+</script>

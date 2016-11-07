@@ -1,0 +1,123 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<script src="~/Scripts/jquery-3.1.1.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<link href="~/assets/css/twitter-feed.css" rel="stylesheet" />
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+@Html.Partial("SendTweet")
+
+<div class="container">
+    <div class="twitterfeed">
+        <div class="header">
+            <h2>Codehouse twitter feeds</h2>
+        </div>
+        <div class="twits scrollbar" >
+            <ul id="twitter">
+
+
+                <!--    <li>
+                <div class="avatar">
+                    <img class="profile" src="" />
+                    <span class="mid-border"></span>
+                    <span class="arrow-box"></span>
+                    <span class="twitter-icon"><img src="~/Content/fonts/twitter_bird_logo.svg" /></span>
+                    <div class="twit-date">
+                        <span id="day"></span>
+                        <span id="month"></span>
+                        <span id="year"></span>
+                    </div>
+                </div>
+                <div class="message">
+                    <h3 id="screenname"></h3>
+                    <p id="text"></p>
+                    <div class="feed-image">
+                        @*<img src="https://dummyimage.com/600x400/c7c7c7/fff" />*@
+                    </div>
+                </div>
+            </li>-->
+
+
+
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+       
+
+        $.get("/a/Twitter/TwitterFeedjson1",
+           function (tweets) {
+               var postImage = "";
+               
+               var divname = $("#twitter");
+               for (var i = 0; i < tweets.length; i++) {
+
+                   if (tweets[i].MediaUrl === null) {
+                       postImage = "";
+                   } else {
+                       postImage = "<img id='mediaImage' src=" + tweets[i].MediaUrl + ">";
+                   }
+                   var TableData =
+                       "<li>" +
+                           "<div class='avatar'>" +
+                           "<img class='profile' src ="+
+                           tweets[i].ProfileImageUrl +
+                           "/>" +
+                           "<span class='mid-border'>" +
+                           "</span>" +
+                           "<span class='arrow-box'>" +
+                           "</span>" +
+                           "<span class='twitter-icon'>" +
+                           "<img src='/assets/fonts/twitter_bird_logo.svg'/>" +
+                           "</span>" +
+                           "<div class='twit-date'>" +
+                           "<span class='top-arrow'>" + "</span>" +
+                           "<span>" +
+                           tweets[i].Day +
+                           "</span>" +
+                           "<span>" +
+                           tweets[i].Month +
+                           "</span>" +
+                           "<span>" +
+                           tweets[i].Year +
+                           "</span>" +
+                           "</Div>" +
+                           "</Div>" +
+                           "<Div class='message'>" +
+                           "<h3>" +
+                           "<a class='feed-title' href='#'>"+
+                           tweets[i].ScreenName +
+                           "</a>"+
+                           "</h3>" +
+                           "<p class='text'>" +
+                           tweets[i].TextAsHtml +
+                           "</p>" +
+                           "<div class='feed-image'> " +
+                           postImage +
+                           "</div>" +
+                           "</div>" +
+                           "</li>";
+
+                   
+                  
+
+                   divname.append(TableData);
+
+                   
+               }
+              
+           });
+
+    });
+
+</script>

@@ -14,10 +14,18 @@ namespace SitecorePlay.Web
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
-                name: "Default",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+               name: "Defaultaaa",
+               url: "a/{controller}/{action}/{id}",
+               defaults: new { controller = "Twitter", action = "Index", id = UrlParameter.Optional }
             );
+
+            //routes.MapRoute(
+            //   name: "Default",
+            //   url: "{controller}/{action}/{id}",
+            //   defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+            //);
+
+            
         }
     }
 }

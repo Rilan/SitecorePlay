@@ -13,7 +13,6 @@
     <description>A framework for creating a strongly typed model of the Sitecore API
 
 Requires: Sitecore 7.2+</description>
-    <summary />
     <releaseNotes>* Fixed a bug with the Original property on wrapped items not attempting to retrieve the item when it's null.
 * Changed search extensions to use Filter instead of Where</releaseNotes>
     <copyright>Copyright 2015</copyright>

@@ -1,0 +1,14 @@
+﻿@using Sitecore.Mvc
+
+<div>
+
+    @using (Html.BeginRouteForm(Sitecore.Mvc.Configuration.MvcSettings.SitecoreRouteName, FormMethod.Post))
+    {
+        @Html.Sitecore().FormHandler("TwitterController", "SendTweet")
+        <input type="text" name="sendtweets" />
+        <input type="submit" value="Tweet" />
+
+    }
+
+</div>
+
